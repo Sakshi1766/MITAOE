@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>College Canteen Ordering</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1>MITAOE Canteen</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#qr-code">QR Ordering</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button id="darkModeToggle">🌙</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Order Your Favorite Food Online</h2>
+      <p>Fresh, tasty, and quick service at your fingertips!</p>
+      <a href="#menu" class="cta-btn">Order Now</a>
+    </div>
+  </section>
+
+  <!-- QR Code Section -->
+  <section id="qr-code" class="qr-code-section">
+    <h2>QR Code Ordering</h2>
+    <p>Scan the QR Code below to order your food directly from your phone.</p>
+    <div class="qr-code">
+      <img src="QR code.png" alt="QR Code">
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="menu-section">
+    <h2>Our Menu</h2>
+
+    <!-- Menu Categories -->
+    <!-- Breakfast -->
+    <div class="menu-category">
+      <h3>Breakfast</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="Veg Sandwich.jpg" alt="Veg Sandwich">
+          <h3>Veg Sandwich</h3>
+          <p>₹30</p>
+          <input type="number" id="quantity1" value="1" min="1">
+          <button class="order-btn" data-item="Veg Sandwich" data-price="30" data-quantity-id="quantity1">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Poha.jpg" alt="Poha">
+          <h3>Poha</h3>
+          <p>₹20</p>
+          <input type="number" id="quantity2" value="1" min="1">
+          <button class="order-btn" data-item="Poha" data-price="20" data-quantity-id="quantity2">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Upma.jpg" alt="Upma">
+          <h3>Upma</h3>
+          <p>₹20</p>
+          <input type="number" id="quantity3" value="1" min="1">
+          <button class="order-btn" data-item="Upma" data-price="20" data-quantity-id="quantity3">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Masala Dosa.jpg" alt="Masala Dosa">
+          <h3>Masala Dosa</h3>
+          <p>₹55</p>
+          <input type="number" id="quantity4" value="1" min="1">
+          <button class="order-btn" data-item="Masala Dosa" data-price="55" data-quantity-id="quantity4">Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Lunch -->
+    <div class="menu-category">
+      <h3>Lunch</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="Thali.jpg" alt="Thali">
+          <h3>Thali</h3>
+          <p>₹50</p>
+          <input type="number" id="quantity5" value="1" min="1">
+          <button class="order-btn" data-item="Thali" data-price="50" data-quantity-id="quantity5">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Veg Biryani.jpg" alt="Veg Biryani">
+          <h3>Veg Biryani</h3>
+          <p>₹70</p>
+          <input type="number" id="quantity6" value="1" min="1">
+          <button class="order-btn" data-item="Veg Biryani" data-price="70" data-quantity-id="quantity6">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Jeera rice.jpg" alt="Jeera Rice">
+          <h3>Jeera Rice</h3>
+          <p>₹60</p>
+          <input type="number" id="quantity7" value="1" min="1">
+          <button class="order-btn" data-item="Jeera Rice" data-price="60" data-quantity-id="quantity7">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Chole Bhature.jpg" alt="Chole Bhature">
+          <h3>Chole Bhature</h3>
+          <p>₹55</p>
+          <input type="number" id="quantity8" value="1" min="1">
+          <button class="order-btn" data-item="Chole Bhature" data-price="55" data-quantity-id="quantity8">Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Snacks -->
+    <div class="menu-category">
+      <h3>Snacks</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="Samosa.jpg" alt="Samosa">
+          <h3>Samosa</h3>
+          <p>₹15</p>
+          <input type="number" id="quantity9" value="1" min="1">
+          <button class="order-btn" data-item="Samosa" data-price="15" data-quantity-id="quantity9">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Vadapav.jpg" alt="Vada Pav">
+          <h3>Vada Pav</h3>
+          <p>₹10</p>
+          <input type="number" id="quantity10" value="1" min="1">
+          <button class="order-btn" data-item="Vada Pav" data-price="10" data-quantity-id="quantity10">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Pav Bhaji.jpg" alt="Pav Bhaji">
+          <h3>Pav Bhaji</h3>
+          <p>₹30</p>
+          <input type="number" id="quantity11" value="1" min="1">
+          <button class="order-btn" data-item="Pav Bhaji" data-price="30" data-quantity-id="quantity11">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Chaat.jpg" alt="Chaat">
+          <h3>Chaat</h3>
+          <p>₹25</p>
+          <input type="number" id="quantity12" value="1" min="1">
+          <button class="order-btn" data-item="Chaat" data-price="25" data-quantity-id="quantity12">Order</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Drinks -->
+    <div class="menu-category">
+      <h3>Drinks</h3>
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img src="Cold COffee.jpg" alt="Cold Coffee">
+          <h3>Cold Coffee</h3>
+          <p>₹40</p>
+          <input type="number" id="quantity13" value="1" min="1">
+          <button class="order-btn" data-item="Cold Coffee" data-price="40" data-quantity-id="quantity13">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="lemonade.jpg" alt="Lemonade">
+          <h3>Lemonade</h3>
+          <p>₹25</p>
+          <input type="number" id="quantity14" value="1" min="1">
+          <button class="order-btn" data-item="Lemonade" data-price="25" data-quantity-id="quantity14">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Green Tea.jpg" alt="Green Tea">
+          <h3>Green Tea</h3>
+          <p>₹20</p>
+          <input type="number" id="quantity15" value="1" min="1">
+          <button class="order-btn" data-item="Green Tea" data-price="20" data-quantity-id="quantity15">Order</button>
+        </div>
+        <div class="menu-card">
+          <img src="Milkshake.jpg" alt="Milkshake">
+          <h3>Milkshake</h3>
+          <p>₹50</p>
+          <input type="number" id="quantity16" value="1" min="1">
+          <button class="order-btn" data-item="Milkshake" data-price="50" data-quantity-id="quantity16">Order</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Order Confirmation Modal -->
+  <div id="orderModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Confirm Your Order</h2>
+      <p id="selectedItem">Item: </p>
+      <p id="itemPrice">Price: </p>
+      <p id="itemQuantity">Quantity: </p>
+      <p id="totalAmount">Total: </p>
+      <button id="confirmOrderBtn">Confirm</button>
+    </div>
+  </div>
+
+  <!-- Payment Modal -->
+  <div id="paymentModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <h2>Payment</h2>
+      <p id="paymentAmount">Total: </p>
+      <button id="payNowBtn" onclick="makePayment('UPI')">Pay with UPI</button>
+      <button id="payNowBtn" onclick="makePayment('Cash')">Pay with Cash</button>
+      <button id="payNowBtn" onclick="makePayment('Card')">Pay with Card</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
