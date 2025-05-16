@@ -38,6 +38,37 @@
       <img src="QR code.png" alt="QR Code">
     </div>
   </section>
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>MITAOE Canteen Crowd Status</title>
+  <link rel="stylesheet" href="crowd.css">
+</head>
+<body>
+
+<!-- Crowd Status Section -->
+<section class="crowd-status-section">
+  <h2>MITAOE Canteen Crowd Status</h2>
+  <p>Check the number of people in the canteen by time slot</p>
+
+  <table class="time-slot-table">
+    <thead>
+      <tr>
+        <th>Time Slot</th>
+        <th>Number of People</th>
+      </tr>
+    </thead>
+    <tbody id="crowdStatusBody">
+      <!-- Filled by JS -->
+    </tbody>
+  </table>
+</section>
+
+<script src="crowd.js"></script>
+</body>
+</html>
+
 
   <!-- Menu Section -->
   <section id="menu" class="menu-section">
