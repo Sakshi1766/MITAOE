@@ -25,6 +25,44 @@ function openOrderModal(itemName, price, quantityId) {
     orderModal.style.display = "none"; // Hide the order modal
   };
 }
+const crowdData = [
+  { time: "08:00 AM - 09:00 AM", people: 10 },
+  { time: "09:00 AM - 10:00 AM", people: 25 },
+  { time: "10:00 AM - 11:00 AM", people: 40 },
+  { time: "11:00 AM - 12:00 PM", people: 35 },
+  { time: "12:00 PM - 01:00 PM", people: 70 },
+  { time: "01:00 PM - 02:00 PM", people: 90 },
+  { time: "02:00 PM - 03:00 PM", people: 60 },
+  { time: "03:00 PM - 04:00 PM", people: 30 },
+  { time: "04:00 PM - 05:00 PM", people: 20 },
+  { time: "05:00 PM - 06:00 PM", people: 15 },
+  { time: "06:00 PM - 07:00 PM", people: 8 },
+  { time: "07:00 PM - 08:00 PM", people: 5 }
+];
+
+function getStatusClass(people) {
+  if (people <= 20) return 'status-low';
+  else if (people <= 50) return 'status-medium';
+  else return 'status-high';
+}
+
+const tbody = document.getElementById('crowdStatusBody');
+
+crowdData.forEach(slot => {
+  const row = document.createElement('tr');
+  row.className = getStatusClass(slot.people);
+
+  const timeCell = document.createElement('td');
+  timeCell.textContent = slot.time;
+
+  const peopleCell = document.createElement('td');
+  peopleCell.textContent = slot.people;
+
+  row.appendChild(timeCell);
+  row.appendChild(peopleCell);
+  tbody.appendChild(row);
+});
+
 
 // Function to open the Payment Modal
 function openPaymentModal(totalAmount) {
