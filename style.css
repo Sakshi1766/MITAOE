@@ -258,3 +258,45 @@ footer {
 .dark-mode footer {
   background-color: #222;
 }
+body {
+  font-family: Arial, sans-serif;
+}
+
+.crowd-status-section {
+  padding: 40px;
+  background-color: #e8f5e9;
+  text-align: center;
+}
+
+.crowd-status-section h2 {
+  margin-bottom: 20px;
+}
+
+.time-slot-table {
+  margin: 0 auto;
+  width: 90%;
+  max-width: 600px;
+  border-collapse: collapse;
+}
+
+.time-slot-table th, .time-slot-table td {
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+.time-slot-table th {
+  background-color: #4caf50;
+  color: white;
+}
+
+.status-low {
+  background-color: #c8e6c9; /* Light green */
+}
+
+.status-medium {
+  background-color: #fff9c4; /* Light yellow */
+}
+
+.status-high {
+  background-color: #ffcdd2; /* Light red */
+}
