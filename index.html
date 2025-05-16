@@ -213,4 +213,56 @@
 
   <script src="script.js"></script>
 </body>
+</html> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact - MITAOE Canteen</title>
+</head>
+<body>
+
+<!-- Contact Section -->
+<section id="contact" style="padding: 40px; background-color: #fff3e0; text-align: center;">
+  <h2>Contact MITAOE Canteen</h2>
+  <p>If you have any questions, feedback, or special requests — we’re here to help!</p>
+  
+  <form id="canteenContactForm" style="max-width: 500px; margin: auto;">
+    <input type="text" id="name" placeholder="Your Name" required style="width: 100%; padding: 12px; margin: 10px 0;" />
+    <input type="email" id="email" placeholder="Your Email" required style="width: 100%; padding: 12px; margin: 10px 0;" />
+    <textarea id="message" placeholder="Your Message..." rows="4" required style="width: 100%; padding: 12px; margin: 10px 0;"></textarea>
+    <button type="submit" style="padding: 12px 25px; background-color: #ff9800; color: white; border: none; cursor: pointer;">Send Message</button>
+    <p id="responseMsg" style="margin-top: 10px;"></p>
+  </form>
+
+  <div style="margin-top: 30px;">
+    <p><strong>Location:</strong> MITAOE Canteen, Alandi, Pune</p>
+    <p><strong>Phone:</strong> +91-98765 43210</p>
+    <p><strong>Email:</strong> canteen@mitaoe.ac.in</p>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+  document.getElementById('canteenContactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const responseMsg = document.getElementById('responseMsg');
+
+    if (!name || !email || !message) {
+      responseMsg.textContent = 'Please fill in all fields.';
+      responseMsg.style.color = 'red';
+    } else {
+      responseMsg.textContent = 'Thanks for reaching out! We’ll get back to you soon.';
+      responseMsg.style.color = 'green';
+      this.reset();
+    }
+  });
+</script>
+
+</body>
 </html>
+
